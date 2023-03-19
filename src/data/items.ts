@@ -14,7 +14,7 @@ export const items: Item[]= [
     {   date: new Date(2023, 0o2, 17),
         category: 'rent',
         title: 'Internet',
-        value: 32.12,
+        value: 89.99,
     },
     {   date: new Date(2023, 0o1, 17),
         category: 'salary',
