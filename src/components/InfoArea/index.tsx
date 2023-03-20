@@ -1,17 +1,27 @@
 import * as C from './style';
+import { formatCurrentMonth } from '../../helpers/dateFilter';
 
 type Props = {
     currentMonth: string;
 }
 
 export const InfoArea = ({ currentMonth}: Props) => {
+    const handlePrevMonth = () => {
+        let [year, month] = currentMonth.split('-')
+        let currentDate = new Date(parseInt(year), parseInt(month) - 1, 1);
+        currentDate.setMonth( currentDate.getMonth() - 1 );
+    }
+
+    const handleNextMonth = () => {
+
+    }
 
     return(
         <C.Container>
            <C.MonthArea>
-             <C.MonthArrow>⬅️</C.MonthArrow>
-             <C.MonthTitle>{currentMonth}</C.MonthTitle>
-             <C.MonthArrow>➡️</C.MonthArrow>
+             <C.MonthArrow onClick={handlePrevMonth}>⬅️</C.MonthArrow>
+             <C.MonthTitle>{formatCurrentMonth(currentMonth)}</C.MonthTitle>
+             <C.MonthArrow onClick={handleNextMonth}>➡️</C.MonthArrow>
 
            </C.MonthArea>
            <C.ResumeArea>
@@ -20,3 +30,4 @@ export const InfoArea = ({ currentMonth}: Props) => {
         </C.Container>
     )
 }
+
