@@ -1,16 +1,17 @@
 import * as C from './style';
 
 type Props = {
-    title:string;
-    value:number;
+    title: string;
+    value: number;
+    color ?: string;
 }
 
-export const ResumeItem = ({title, value} :Props ) => {
+export const ResumeItem = ({title, value, color}: Props ) => {
 
     return(
         <C.Container>
             <C.Title>{title}</C.Title>
-            <C.Info>R$ {value}</C.Info>
+            <C.Info color={color}>R$ {value.toFixed(2)}</C.Info>
         </C.Container>
     );
 }
