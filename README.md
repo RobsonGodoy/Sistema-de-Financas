@@ -2,5 +2,7 @@
 
 Este projeto foi desenvolvido a fim de validar alguns estudos em cima de TypeScript e também React, disponibilizado para estudos para outros devs que estão em sua jornada.
 
+Você pode fazer o download do código e rodar em sua máquina.
+
 **Aproveite seu processo e evolua um pouquinho a cada dia, assim você chega longe!**
 
